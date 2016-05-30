@@ -26,7 +26,15 @@ Route::group(['middleware' => 'oauth'], function() {
 
 });
 
+Route::group(['middleware' => 'cors'], function() {
+
+	//departamentos
 	Route::resource('departamento', 'DepartamentoController', ['except' => ['create', 'edit']]);
+
+});
+
+
+	//Route::resource('departamento', 'DepartamentoController', ['except' => ['create', 'edit']]);
 	Route::resource('sala', 'SalaController', ['except' => ['create', 'edit']]);
 	Route::resource('motivo', 'MotivoController');
 	Route::resource('incidencia', 'IncidenciaController');
