@@ -29,7 +29,11 @@ Route::group(['middleware' => 'oauth'], function() {
 Route::group(['middleware' => 'cors'], function() {
 
 	//departamentos
-	Route::resource('departamento', 'DepartamentoController', ['except' => ['create', 'edit']]);
+	Route::post('departamento', 'DepartamentoController@store', ['except' => ['create', 'edit']]);
+	Route::get('departamento', 'DepartamentoController@index', ['except' => ['create', 'edit']]);
+	Route::get('departamento/{id}', 'DepartamentoController@show', ['except' => ['create', 'edit']]);
+	Route::put('departamento/{id}', 'DepartamentoController@update', ['except' => ['create', 'edit']]);
+	Route::delete('departamento/{id}', 'DepartamentoController@destroy', ['except' => ['create', 'edit']]);
 
 });
 
