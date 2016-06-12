@@ -35,14 +35,23 @@ Route::group(['middleware' => 'cors'], function() {
 	Route::put('departamento/{id}', 'DepartamentoController@update', ['except' => ['create', 'edit']]);
 	Route::delete('departamento/{id}', 'DepartamentoController@destroy', ['except' => ['create', 'edit']]);
 
+	//departamentos
+	Route::post('motivo', 'MotivoController@store', ['except' => ['create', 'edit']]);
+	Route::get('motivo', 'MotivoController@index', ['except' => ['create', 'edit']]);
+	Route::get('motivo/{id}', 'MotivoController@show', ['except' => ['create', 'edit']]);
+	Route::put('motivo/{id}', 'MotivoController@update', ['except' => ['create', 'edit']]);
+	Route::delete('motivo/{id}', 'MotivoController@destroy', ['except' => ['create', 'edit']]);
+
+	Route::resource('incidencia', 'IncidenciaController');
+
+
 });
 
 
 	//Route::resource('departamento', 'DepartamentoController', ['except' => ['create', 'edit']]);
-	Route::resource('sala', 'SalaController', ['except' => ['create', 'edit']]);
-	Route::resource('motivo', 'MotivoController');
-	Route::resource('incidencia', 'IncidenciaController');
-
+	//Route::resource('sala', 'SalaController', ['except' => ['create', 'edit']]);
+	//Route::resource('motivo', 'MotivoController');
+	
 
 
 Route::get('/', function () {
