@@ -3,10 +3,9 @@
 namespace Salf\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Salf\Http\Requests;
 use Salf\Repositories\SalaRepository;
 use Salf\Services\SalaService;
-
-
 
 class SalaController extends Controller
 {
@@ -84,8 +83,8 @@ class SalaController extends Controller
     public function update(Request $request, $id)
     {
         //dd($request);
-        return $this->service->update($request->all(), $id);
-        //return $this->service->find($id);
+        $this->service->update($request->all(), $id);
+        return $this->service->find($id);
     }
 
     /**

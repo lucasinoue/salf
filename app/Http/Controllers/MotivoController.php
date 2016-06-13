@@ -4,7 +4,6 @@ namespace Salf\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Salf\Http\Requests;
-
 use Salf\Repositories\MotivoRepository;
 use Salf\Services\MotivoService;
 

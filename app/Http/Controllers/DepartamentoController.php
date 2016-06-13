@@ -3,10 +3,9 @@
 namespace Salf\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Salf\Http\Requests;
 use Salf\Repositories\DepartamentoRepository;
 use Salf\Services\DepartamentoService;
-
-
 
 class DepartamentoController extends Controller
 {

@@ -1,9 +1,9 @@
 <?php
 
 namespace Salf\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Salf\Http\Requests;
-
 use Salf\Repositories\IncidenciaRepository;
 use Salf\Services\IncidenciaService;
 
