@@ -16,7 +16,7 @@ $factory->define(Salf\Entities\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
-        'departamento_id' => 1,
+        'departamento_id' => 5,
         'tipo' => 1,
         'remember_token' => str_random(10),
     ];

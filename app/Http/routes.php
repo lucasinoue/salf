@@ -52,6 +52,13 @@ Route::group(['middleware' => 'cors'], function() {
 	Route::delete('sala/{id}', 'SalaController@destroy', ['except' => ['create', 'edit']]);
 
 
+	//usuario
+	Route::post('usuario', 'UserController@store', ['except' => ['create', 'edit']]);
+	Route::get('usuario', 'UserController@index', ['except' => ['create', 'edit']]);
+	Route::get('usuario/{id}', 'UserController@show', ['except' => ['create', 'edit']]);
+	Route::put('usuario/{id}', 'UserController@update', ['except' => ['create', 'edit']]);
+	Route::delete('usuario/{id}', 'UserController@destroy', ['except' => ['create', 'edit']]);
+
 });
 
 

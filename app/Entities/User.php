@@ -23,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function departamento()
+    {
+        return $this->belongsTo(Departamento::class,'departamento_id');
+    }
+
 }

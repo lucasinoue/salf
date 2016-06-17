@@ -43,5 +43,10 @@ class SalfRepositoryProvider extends ServiceProvider
             \Salf\Repositories\MotivoRepositoryEloquent::class
         );
 
+        $this->app->bind(
+            \Salf\Repositories\UserRepository::class,
+            \Salf\Repositories\UserRepositoryEloquent::class
+        );
+
     }
 }
