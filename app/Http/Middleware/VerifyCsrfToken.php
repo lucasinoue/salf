@@ -12,9 +12,10 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        'sala/*',
-        'departamento/*',
-        'incidencia/*',
-        'motivo/*'
+        '/sala/*',
+        '/departamento/*',
+        '/incidencia/*',
+        '/motivo/*',
+        '/user/*'
     ];
 }

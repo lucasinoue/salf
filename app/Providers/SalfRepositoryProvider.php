@@ -48,5 +48,15 @@ class SalfRepositoryProvider extends ServiceProvider
             \Salf\Repositories\UserRepositoryEloquent::class
         );
 
+        $this->app->bind(
+            \Salf\Repositories\HorarioRepository::class,
+            \Salf\Repositories\HorarioRepositoryEloquent::class
+        );
+
+        $this->app->bind(
+            \Salf\Repositories\ReservaRepository::class,
+            \Salf\Repositories\ReservaRepositoryEloquent::class
+        );
+
     }
 }

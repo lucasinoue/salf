@@ -46,3 +46,19 @@ $factory->define(Salf\Entities\Motivo::class, function (Faker\Generator $faker) 
         'descricao' => $faker->colorName,
     ];
 });
+
+$factory->define(Salf\Entities\Horario::class, function (Faker\Generator $faker) {
+    return [
+        'descricao' => $faker->colorName,
+    ];
+});
+
+$factory->define(Salf\Entities\Reserva::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->numberBetween($min = 1, $max = 10),
+        'motivo_id' => $faker->numberBetween($min = 1, $max = 10),
+        'data' => $faker->date($format = 'd/m/Y', $max = 'now'),
+        'sala_id' => $faker->numberBetween($min = 1, $max = 10),
+        'horario_id' => $faker->numberBetween($min = 1, $max = 15)
+    ];
+});

@@ -20,7 +20,7 @@ Route::post('oauth/access_token', function(){
     return Response::json(Authorizer::issueAccessToken());
 });
 
-Route::group(['middleware' => 'cors'], function() {
+Route::group(['middleware' => ['cors']], function() {
 
 	//departamentos
 	Route::post('departamento', 'DepartamentoController@store', ['except' => ['create', 'edit']]);
@@ -45,11 +45,17 @@ Route::group(['middleware' => 'cors'], function() {
 	Route::delete('incidencia/{id}', 'IncidenciaController@destroy', ['except' => ['create', 'edit']]);
 
 
-	Route::post('sala', 'SalaController@store', ['except' => ['create', 'edit']]);
-	Route::get('sala', 'SalaController@index', ['except' => ['create', 'edit']]);
-	Route::get('sala/{id}', 'SalaController@show', ['except' => ['create', 'edit']]);
-	Route::put('sala/{id}', 'SalaController@update', ['except' => ['create', 'edit']]);
-	Route::delete('sala/{id}', 'SalaController@destroy', ['except' => ['create', 'edit']]);
+	Route::post('sala', 'SalaController@store');
+	Route::get('sala', 'SalaController@index');
+	Route::get('sala/{id}', 'SalaController@show');
+	Route::put('sala/{id}', 'SalaController@update');
+	Route::delete('sala/{id}', 'SalaController@destroy');
+
+	Route::post('departamento', 'DepartamentoController@store', ['except' => ['create', 'edit']]);
+	Route::get('departamento', 'DepartamentoController@index', ['except' => ['create', 'edit']]);
+	Route::get('departamento/{id}', 'DepartamentoController@show', ['except' => ['create', 'edit']]);
+	Route::put('departamento/{id}', 'DepartamentoController@update', ['except' => ['create', 'edit']]);
+	Route::delete('departamento/{id}', 'DepartamentoController@destroy', ['except' => ['create', 'edit']]);	
 
 
 	//usuario
@@ -59,8 +65,22 @@ Route::group(['middleware' => 'cors'], function() {
 	Route::put('usuario/{id}', 'UserController@update', ['except' => ['create', 'edit']]);
 	Route::delete('usuario/{id}', 'UserController@destroy', ['except' => ['create', 'edit']]);
 
+
+	//horarios
+	Route::get('horarios', 'HorarioController@index');
+	Route::get('horarios/{id}', 'HorarioController@show');
+
+	Route::post('reserva', 'ReservaController@store');
+	Route::get('reserva', 'ReservaController@index');
+	Route::get('reserva/{id}', 'ReservaController@show');
+	Route::put('reserva/{id}', 'ReservaController@update');
+	Route::delete('reserva/{id}', 'ReservaController@destroy');
+
+
 });
 
+
+	
 
 
 	//Route::resource('departamento', 'DepartamentoController', ['except' => ['create', 'edit']]);
