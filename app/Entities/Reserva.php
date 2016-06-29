@@ -11,11 +11,11 @@ class Reserva extends Model implements Transformable
     use TransformableTrait;
 
     protected $fillable = [
-        'user_id',
-        'motivo_id',
+        'id_usuario',
+        'id_motivo',
         'data',
-        'sala_id',
-        'horario_id'
+        'id_sala',
+        'id_horario'
     ];
 
 }

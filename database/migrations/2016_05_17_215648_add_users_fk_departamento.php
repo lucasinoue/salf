@@ -13,7 +13,7 @@ class AddUsersFkDepartamento extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreign('departamento_id')
+            $table->foreign('id_departamento')
                   ->references('id')->on('departamentos')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');

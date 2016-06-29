@@ -15,11 +15,11 @@ class CreateReservasTable extends Migration
 	{
 		Schema::create('reservas', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('motivo_id');
-            $table->integer('sala_id');
+            $table->integer('id_usuario');
+            $table->integer('id_motivo');
+            $table->integer('id_sala');
             $table->date('data');
-            $table->integer('horario_id');
+            $table->integer('id_horario');
             $table->timestamps();
 		});
 	}

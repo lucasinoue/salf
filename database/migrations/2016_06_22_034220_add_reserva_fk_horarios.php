@@ -13,7 +13,7 @@ class AddReservaFkHorarios extends Migration
     public function up()
     {
         Schema::table('reservas', function (Blueprint $table) {
-                $table->foreign('horario_id')
+                $table->foreign('id_horario')
                     ->references('id')->on('horarios')
                     ->onUpdate('cascade');
         });

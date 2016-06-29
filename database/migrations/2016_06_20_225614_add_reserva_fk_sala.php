@@ -13,7 +13,7 @@ class AddReservaFkSala extends Migration
     public function up()
     {
         Schema::table('reservas', function (Blueprint $table) {
-                $table->foreign('sala_id')
+                $table->foreign('id_sala')
                     ->references('id')->on('salas')
                     ->onUpdate('cascade')
                     ->onDelete('cascade');

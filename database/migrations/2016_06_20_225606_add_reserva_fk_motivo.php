@@ -13,7 +13,7 @@ class AddReservaFkMotivo extends Migration
     public function up()
     {
         Schema::table('reservas', function (Blueprint $table) {
-                $table->foreign('motivo_id')
+                $table->foreign('id_motivo')
                     ->references('id')->on('motivos')
                     ->onUpdate('cascade');
         });

@@ -13,7 +13,7 @@ class AddReservaFkUser extends Migration
     public function up()
     {
         Schema::table('reservas', function (Blueprint $table) {
-                $table->foreign('user_id')
+                $table->foreign('id_usuario')
                     ->references('id')->on('users')
                     ->onUpdate('cascade');
         });

@@ -16,7 +16,7 @@ $factory->define(Salf\Entities\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
-        'departamento_id' => 5,
+        'id_departamento' => 5,
         'tipo' => 1,
         'remember_token' => str_random(10),
     ];
@@ -55,10 +55,10 @@ $factory->define(Salf\Entities\Horario::class, function (Faker\Generator $faker)
 
 $factory->define(Salf\Entities\Reserva::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->numberBetween($min = 1, $max = 10),
-        'motivo_id' => $faker->numberBetween($min = 1, $max = 10),
+        'id_usuario' => $faker->numberBetween($min = 1, $max = 10),
+        'id_motivo' => $faker->numberBetween($min = 1, $max = 10),
         'data' => $faker->date($format = 'd/m/Y', $max = 'now'),
-        'sala_id' => $faker->numberBetween($min = 1, $max = 10),
-        'horario_id' => $faker->numberBetween($min = 1, $max = 15)
+        'id_sala' => $faker->numberBetween($min = 1, $max = 10),
+        'id_horario' => $faker->numberBetween($min = 1, $max = 15)
     ];
 });

@@ -52,7 +52,6 @@ class UserService
 	{
 
 		try {
-			dd($data);
 			$this->validator->with($data)->passesOrFail();
 			return $this->repository->update($data, $id);
 		}
