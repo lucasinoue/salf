@@ -11,6 +11,6 @@ class UserValidator extends LaravelValidator {
     	'name' => 'required|max:255',
     	'email' => 'required|max:255',
     	'password' => 'required',
-    	'departamento_id' => 'required'
+    	'id_departamento' => 'required'
    ];
 }

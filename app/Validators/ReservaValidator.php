@@ -9,27 +9,27 @@ class ReservaValidator extends LaravelValidator {
 
     protected $rules = [
         
-    	'user_id' => 'required|exists:users,id',
-        'motivo_id' => 'required|exists:motivos,id',
+    	'id_usuario' => 'required|exists:users,id',
+        'id_motivo' => 'required|exists:motivos,id',
         'data' => 'required',
-        'sala_id' => 'required|exists:salas,id',
-        'horario_id' => 'required|exists:horarios,id'
+        'id_sala' => 'required|exists:salas,id',
+        'id_horario' => 'required|exists:horarios,id'
 
    ];
 
 
     protected $messages = [
 
-    	'user_id.required' => 'Usuario é obrigatorio.',
-    	'motivo_id.required' => 'Motivo é obrigatorio.',
+    	'id_usuario.required' => 'Usuario é obrigatorio.',
+    	'id_motivo.required' => 'Motivo é obrigatorio.',
     	'data.required' => 'Data é obrigatoria.',
-    	'sala_id.required' => 'Sala é obrigatoria.',
-    	'horario_id.required' => 'Horario é obrigatorio.',
+    	'id_sala.required' => 'Sala é obrigatoria.',
+    	'id_horario.required' => 'Horario é obrigatorio.',
 
-    	'user_id.exists' => 'Usuario não existe.',
-    	'motivo_id.exists' => 'Usuario não existe.',
-    	'sala_id.exists' => 'Usuario não existe.',
-    	'horario_id.exists' => 'Horario  não existe.'
+    	'id_usuario.exists' => 'Usuario não existe.',
+    	'id_motivo.exists' => 'Usuario não existe.',
+    	'id_sala.exists' => 'Usuario não existe.',
+    	'id_horario.exists' => 'Horario  não existe.'
     ];
 
 }

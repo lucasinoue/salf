@@ -16,7 +16,7 @@ $factory->define(Salf\Entities\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
-        'id_departamento' => 5,
+        'id_departamentol' => 5,
         'tipo' => 1,
         'remember_token' => str_random(10),
     ];
@@ -24,20 +24,20 @@ $factory->define(Salf\Entities\User::class, function (Faker\Generator $faker) {
 
 $factory->define(Salf\Entities\Departamento::class, function (Faker\Generator $faker) {
     return [
-        'descricao' => $faker->sentence,
+        'descricao' => $faker->colorName,
     ];
 });
 
 
 $factory->define(Salf\Entities\Sala::class, function (Faker\Generator $faker) {
     return [
-        'descricao' => $faker->sentence,
+        'descricao' => $faker->colorName,
     ];
 });
 
 $factory->define(Salf\Entities\Incidencia::class, function (Faker\Generator $faker) {
     return [
-        'descricao' => $faker->sentence,
+        'descricao' => $faker->colorName,
     ];
 });
 
